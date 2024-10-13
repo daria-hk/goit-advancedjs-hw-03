@@ -1,5 +1,5 @@
-import { getImg } from "./js/imgService";
-import { createCardsMarkup } from "./js/cards";
+import { getImg } from "./js/pixabay-api";
+import { createCardsMarkup } from "./js/render-functions";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
