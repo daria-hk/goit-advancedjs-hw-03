@@ -32,18 +32,22 @@ function createCardsMarkup(cards) {
       </li>`
     )
     .join('');
+    
+    loadSimpleLitebox(cartItem);
+}
 
-  const gallery = document.querySelector("ul.images-div");
-  gallery.innerHTML = cartItem; 
+function loadSimpleLitebox(cartItem) {
+    const gallery = document.querySelector("ul.images-div");
+    gallery.innerHTML = cartItem; 
 
-  if (galleryLightbox) {
-    galleryLightbox.refresh();
-  } else {
-    galleryLightbox = new SimpleLightbox(".images-div a", {
-      captionsData: "alt",
-      captionDelay: 250,
-    });
-  }
+    if (galleryLightbox) {
+        galleryLightbox.refresh();
+    } else {
+        galleryLightbox = new SimpleLightbox(".images-div a", {
+        captionsData: "alt",
+        captionDelay: 250,
+        });
+    }
 }
 
 export { createCardsMarkup };
