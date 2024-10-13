@@ -25,7 +25,7 @@ function handleSearch(evt) {
     return;
   }
 
-  loaderClass.style.display = "block"; // Show the loader
+  loaderClass.style.display = "flex";
 
   getImg(searchValue)
     .then((data) => {

@@ -98,28 +98,29 @@ form {
   gap: 8px;
 }
 
-.loader {
-  display: block;
-  position: relative;
-  height: 12px;
-  width: 80%;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.loader:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 0;
-  background: #ff3d00;
-  animation: 6s prog ease-in infinite;
+.loaderClass {
+  justify-content: center;
+  margin-bottom: 16px;
 }
 
-@keyframes prog {
-  to {
-    width: 100%;
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  justify-content: center;
+  background: black;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
